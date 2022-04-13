@@ -1,5 +1,5 @@
-import org.junit.Assert;
 import org.junit.Test;
+import org.junit.Assert;;
 
 public class TestePagamentos {
 
@@ -9,43 +9,43 @@ public class TestePagamentos {
 
     //TESTE PARA DESCONTO MASTERCARD
     @Test
-    public void TestarMastercardDesconto(){
+    public void TestarMastercardDesconto(double param1, double param2, int param3) {
 
-        Assert.assertEquals(  96,  pagamento.TipoMaster(100, 3) ,  delta);
-    }
+        Assert.assertEquals(param1, pagamento.TipoMaster(param2, param3), delta);
+    } 
 
     //TESTE PARA ACRESCIMO MASTERCARD
     @Test
-    public void TestarMastercardAcrescimo(){
+    public void TestarMastercardAcrescimo() {
 
-        Assert.assertEquals(  102,  pagamento.TipoMaster(100, 4) ,  delta);
+        Assert.assertEquals(102, pagamento.TipoMaster(100, 4), delta);
     }
 
     //TESTE PARA DESCONTO VISA
     @Test
-    public void TestarVisaDesconto(){
+    public void TestarVisaDesconto() {
 
-        Assert.assertEquals(  94,  pagamento.TipoVisa(100, 2) ,  delta);
+        Assert.assertEquals(94, pagamento.TipoVisa(100, 2), delta);
     }
 
     //TESTE PARA ACRESCIMO VISA
     @Test
-    public void TestarVisaAcrescimo(){
+    public void TestarVisaAcrescimo() {
 
-        Assert.assertEquals(  104,  pagamento.TipoVisa(100, 3) ,  delta);
+        Assert.assertEquals(104, pagamento.TipoVisa(100, 3), delta);
     }
 
     //TESTE PARA PAGAMENTO A VISTA COM PIX
     @Test
-    public void TestarAvistaPIX(){
+    public void TestarAvistaPIX() {
 
         Assert.assertEquals(91, pagamento.TipoAvista(100, "pix"), delta);
     }
 
     //TESTE PARA PAGAMENTO A VISTA EM ESPECIE
     @Test
-    public void TestarAvistaEspecie(){
+    public void TestarAvistaEspecie() {
 
-        Assert.assertEquals( 91, pagamento.TipoAvista(100, "especie"), delta);
+        Assert.assertEquals(91, pagamento.TipoAvista(100, "especie"), delta);
     }
 }

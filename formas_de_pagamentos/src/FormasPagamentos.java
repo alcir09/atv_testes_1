@@ -1,12 +1,13 @@
 public class FormasPagamentos {
 
+
     private double desconto;
     private double acrescimo;
     private double valor_final;
 
     //PAGAMENTO VIA MASTERCARD TEM 4% DE DESCONTO PARA PARCELAMENTO ATÉ 3 VEZES
     //SE FOR ACIMA DE 3 VEZES É ACESCENTADO JUROS DE 2%
-    public double TipoMaster(double valor, int parcelamento) {
+    public Double TipoMaster(double valor, int parcelamento) {
 
         if (parcelamento <= 3) {
 
